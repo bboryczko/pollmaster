@@ -9,10 +9,14 @@
 Make sure you have docker installed. Instructions on how to do so are beyond the scope of this document
 
 Create a folder where your Docker files will be stored:
-`mkdir ~/pollmaster-docker`
+```
+mkdir ~/pollmaster-docker
+```
 
 Change into the newly created folder:
-`cd pollmaster-docker`
+```
+cd pollmaster-docker
+```
 
 Download the Dockerfile and docker-compose.yml files and put them in the newly created folder:
 ```
@@ -21,7 +25,8 @@ wget https://github.com/bboryczko/pollmaster/raw/master/docker-compose.yml
 ```
 Create a secrets.py in pollmaster-docker folder. You can use the following template:
 
-```python
+```
+python
 class Secrets:
     def __init__(self):
         self.dbl_token = ''  # DBL token (only needed for public bot, not needed for self-hosted bot)
@@ -33,14 +38,20 @@ SECRETS = Secrets()
 ```
 
 Create another folder, to store the database file:
-`mkdir db_data`
+```
+mkdir db_data
+```
 
 Execute the following command to create the docker container:
-` docker-compose up -d`
+```
+docker-compose up -d
+```
 
 This will build the docker image, using the Dockerfile and the docker-compose.yml file. It will start the pollmaster container and a mondgodb container.
 You can verify the containers are running by executing the following command:
-`docker ps`
+```
+docker ps
+```
 
 ##  Setup app and bot in Discord 
 
@@ -59,7 +70,9 @@ You can verify the containers are running by executing the following command:
 ## Log files
 
 - You can view the log file pollmaster.log in the pollmaster directory, using docker command:
-`docker logs pollmaster`
+```
+docker logs pollmaster
+```
 
 - You can see the following :
 ```
