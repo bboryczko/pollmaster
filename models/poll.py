@@ -1100,7 +1100,7 @@ class Poll:
         """Create export file and return path"""
         if not self.open:
             clean_label = str(self.short).replace("/", "").replace(".", "")
-            fn = 'export/' + str(self.server.id) + '_' + clean_label + '.txt'
+            fn = '/pollmaster/export/' + str(self.server.id) + '_' + clean_label + '.txt'
             with codecs.open(fn, 'w', 'utf-8') as outfile:
                 outfile.write(await self.to_export())
             return fn
