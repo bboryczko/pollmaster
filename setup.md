@@ -15,8 +15,8 @@ Change into the newly created folder:
 `cd pollmaster-docker`
 
 Download the Dockerfile and docker-compose.yml files and put them in the newly created folder:
-``` wget https://github.com/bboryczko/pollmaster/raw/master/Dockerfile
-
+```
+wget https://github.com/bboryczko/pollmaster/raw/master/Dockerfile
 wget https://github.com/bboryczko/pollmaster/raw/master/docker-compose.yml
 ```
 
