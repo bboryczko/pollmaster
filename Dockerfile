@@ -1,4 +1,5 @@
 FROM python
+MAINTAINER bboryczko@noverus.com
 
 RUN git clone https://github.com/bboryczko/pollmaster.git \
 && cd pollmaster \
