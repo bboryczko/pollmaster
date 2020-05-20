@@ -12,7 +12,7 @@ services:
     depends_on:
       - database
     build: .
-    container_name: pollmaster
+    container_name: "pollmaster"
 volumes:
     db_data: {}
     
