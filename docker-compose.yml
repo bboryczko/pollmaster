@@ -1,0 +1,16 @@
+version: '3'
+services:
+  database:
+    image: mongo:latest
+    container_name: "mongodb"
+    ports:
+      - "27017:27017"
+    restart: always
+    volumes:
+      - ./db_data:/data/db
+  pollmaster:
+    depends_on:
+      - database
+    build: .
+volumes:
+    db_data: {}
