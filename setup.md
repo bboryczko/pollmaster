@@ -19,7 +19,6 @@ Download the Dockerfile and docker-compose.yml files and put them in the newly c
 wget https://github.com/bboryczko/pollmaster/raw/master/Dockerfile
 wget https://github.com/bboryczko/pollmaster/raw/master/docker-compose.yml
 ```
-
 Create a secrets.py in pollmaster-docker folder. You can use the following template:
 
 ```python
@@ -32,6 +31,9 @@ class Secrets:
 
 SECRETS = Secrets()
 ```
+
+Create another folder, to store the database file:
+`mkdir db_data`
 
 Execute the following command to create the docker container:
 ` docker-compose up -d`
